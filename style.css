@@ -1,0 +1,141 @@
+/* Updated style.css with Crazy Vibes */
+
+/* Global Styles */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fbc2eb, #a6c1ee);
+  background-size: 400% 400%;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  animation: gradientBG 10s ease infinite;
+}
+
+/* Keyframes for animated background */
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Canvas Styling */
+canvas {
+  border: 4px solid #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+  width: 100vw;
+  height: 100vh;
+  background: rgba(255, 255, 255, 0.9);
+  cursor: crosshair black;
+}
+
+/* Toolbox Styling */
+.toolbox {
+  background: rgba(0, 0, 0, 0.8);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  border-radius: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  width: auto;
+  max-width: 90vw;
+  padding: 1rem;
+  justify-content: center;
+  position: absolute;
+  top: 10px;
+  z-index: 1;
+  gap: 10px;
+  animation: bounce 3s ease infinite;
+}
+
+/* Keyframes for bouncing toolbox */
+/* @keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+} */
+
+/* Toolbox Buttons */
+.toolbox > * {
+  background: linear-gradient(45deg, #ff6f91, #ff9671, #ffc75f, #f9f871);
+  background-size: 200% 200%;
+  color: #fff;
+  border: none;
+  font-size: 1.2rem;
+  height: 50px;
+  width: 50px;
+  margin: 0.25rem;
+  padding: 0.25rem;
+  cursor: pointer black;
+  border-radius: 50%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s, background-position 0.5s;
+  animation: glowing 3s infinite;
+}
+
+/* Button Hover Effects */
+.toolbox > *:hover {
+  transform: scale(1.2) rotate(10deg);
+  background-position: 100% 0%;
+}
+
+/* Glowing animation for buttons */
+/* @keyframes glowing {
+  0% { box-shadow: 0 0 5px #ff6f91, 0 0 15px #ff9671; }
+  50% { box-shadow: 0 0 20px #ffc75f, 0 0 30px #f9f871; }
+  100% { box-shadow: 0 0 5px #ff6f91, 0 0 15px #ff9671; }
+} */
+
+/* Active Eraser Button */
+.toolbox #eraser.active {
+  border: 2px solid #ff6f91;
+  animation: pulse 1.5s infinite;
+}
+
+/* Pulse effect for active eraser */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+/* Brush Shape Dropdown */
+#brushShape {
+  background-color: #fff;
+  color: #333;
+  border: 2px solid #ff9671;
+  border-radius: 5px;
+  font-size: 1rem;
+  padding: 0.5rem;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+#brushShape:hover {
+  border-color: #ffc75f;
+}
+
+/* Size Indicator */
+#size {
+  background: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  color: #333;
+  font-weight: bold;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  animation: pulse 2s infinite;
+}
+
+/* Active Eraser Button */
+.toolbox #eraser.active {
+  background-color: #fff; /* White background to match the canvas */
+  border: 2px solid #f44336; /* Red border for visibility */
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.6); /* Light shadow to give a pad-like effect */
+  animation: pulse 1.5s infinite; /* Pulse animation to highlight active state */
+}
