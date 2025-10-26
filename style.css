@@ -32,7 +32,7 @@ canvas {
   box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
   width: 100vw;
   height: 100vh;
-  background: rgba(255, 255, 255, 0.9);
+  background:white;
   cursor: crosshair black;
 }
 
@@ -64,7 +64,7 @@ canvas {
 .toolbox > * {
   background: linear-gradient(45deg, #ff6f91, #ff9671, #ffc75f, #f9f871);
   background-size: 200% 200%;
-  color: #fff;
+  color: white;
   border: none;
   font-size: 1.2rem;
   height: 50px;
@@ -106,7 +106,7 @@ canvas {
 
 /* Brush Shape Dropdown */
 #brushShape {
-  background-color: #fff;
+  background-color: white;
   color: #333;
   border: 2px solid #ff9671;
   border-radius: 5px;
@@ -122,7 +122,7 @@ canvas {
 
 /* Size Indicator */
 #size {
-  background: #fff;
+  background:white;
   padding: 0.5rem 1rem;
   border-radius: 10px;
   font-size: 1.2rem;
@@ -134,8 +134,9 @@ canvas {
 
 /* Active Eraser Button */
 .toolbox #eraser.active {
-  background-color: #fff; /* White background to match the canvas */
+  background-color:white; /* White background to match the canvas */
   border: 2px solid #f44336; /* Red border for visibility */
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.6); /* Light shadow to give a pad-like effect */
   animation: pulse 1.5s infinite; /* Pulse animation to highlight active state */
+  cursor: pointer;
 }
